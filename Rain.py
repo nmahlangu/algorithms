@@ -16,11 +16,8 @@ def calc_rain(arr):
 			rain += max_height - item
 	return rain
 
-assert(calc_rain([5,2,4,2,5]) == 7)
-assert(calc_rain([-2,-4,-2]) == 2)
-
 # Solution: Precompute the max height of any block to the left and right of every
 # block. Then for each block, increment a rain counter by the (minimum
 # of the left and right highest blocks for that block) - the height
 # of the block, if the former difference is greater than the latter
-# height. 
+# height.
