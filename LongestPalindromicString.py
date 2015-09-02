@@ -23,7 +23,7 @@ class Solution:
             p1 = self.expandFromCenter(s,i,i)
             p2 = self.expandFromCenter(s,i,i+1)
             p = max(p1,p2,key=len)
-            longest = p if len(p) > len(longest) else longest
+            longest = max(p,longest,key=len)
         return longest
 
 # Solution: 
