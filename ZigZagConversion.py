@@ -30,8 +30,6 @@ class Naive_Solution:
             bucket_index = bucket_index + 1 if increment else bucket_index - 1            
 	return reduce(lambda acc, elt: acc+"".join(elt),buckets,"")
 
-print Naive_Solution().convert("PAYPALISHIRING",4)
-
 # Naive Solution: Build up the zigzag character matrix using a 2D array, then join together
 # each row of the 2D array as a string and return all the strings concatenated. Time and space
 # complexity are both O(n).
@@ -50,8 +48,6 @@ class Solution:
 				if (i > 0) and (i < numRows - 1) and (curr - i - i < len(s)):
 					new_s += s[curr - i - i] # char in next not-full column
 		return new_s
-
-print Solution().convert("PAYPALISHIRING",4)
 
 # Solution: Generate the final string by computing the indices you need ahead of time. Imagine each
 # possible position a character can be in in the zig zag as a different bucket (e.g. if there's 4
