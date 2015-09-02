@@ -39,4 +39,4 @@ class Solution(object):
 
 # Solution: Error check for leading spaces and a '+' or '-' sign. After that, convert each char
 # to an int, if it's invalid, stop parsing and return the running sum. Otherwise, add the new
-# number to the result * 10.
+# number to the result * 10. Time complexity is O(n), space complexity is O(1).
