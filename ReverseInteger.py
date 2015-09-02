@@ -25,7 +25,7 @@ class Solution(object):
 	ans = 0
 	while x > 0:
 		ans = (ans * 10) + (x % 10)
-		if ans > 2147483647:
+		if ans > (2**31)-1:
 			return 0
 		x /= 10
 	return ans if positive else (-1 * ans)   
