@@ -35,6 +35,6 @@ class Solution(object):
         return result
 
 # Solution: For each element of the array, have 2 pointers at the next element (start) and the last element of
-# the array (end), respectively. If the 3 numbers sum to less than 0, move the start pointer right one element.
-# If the numbers sum to more than 0, move the end pointer left one element. Repeat this until start == end. Time
-# complexity is O(n^2) and space complexity is O(n).
+# the array (end), respectively. If the 3 numbers at those indices sum to less than 0, move the start pointer 
+# right one element. If the numbers sum to more than 0, move the end pointer left one element. Repeat this until 
+# start == end. Time complexity is O(n^2) and space complexity is O(n).
