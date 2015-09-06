@@ -18,7 +18,7 @@ q.pop(0)               # dequeue an element
 # priority queue
 from Queue import PriorityQueue
 pq = PriorityQueue()
-pq.put((0,"Nicholas))  # add an element (first element in tuple is priority)
+pq.put((0,"Nicholas"))  # add an element (first element in tuple is priority)
 pq.empty()             # check if empty
 pq.qsize()             # get size
 pq.get()               # dequeue an element (using priority)
