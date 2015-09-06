@@ -23,5 +23,5 @@ def PrintTreeLevelByLevel(node):
 # Perform BFS, keeping a dummy element in the queue of nodes to visit. Whenever the dummy
 # is dequeued, print a newline and place the dummy back at the end of the queue (unless it's
 # empty meaning there are no more nodes to visit and the traversal is done). For all other
-# elements that are dequeued, enqueue all of it's children and print the parent (withou
+# elements that are dequeued, enqueue all of it's children and print the parent (without
 # a newline).  
