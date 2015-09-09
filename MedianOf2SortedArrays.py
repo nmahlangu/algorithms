@@ -37,7 +37,7 @@ class Solution:
 # [b_0,b_1,b_2...b_n/2,b_n/2+1...b_n-2,b_n-1] for B
 # |---- Section 3 ----||---- Section 4 ----|
 #
-# Case: m/2 + n/2 < k, meaning kth element can only be located in Section 2 or 4 because...
+# Case: a[m/2] + b[n/2] < k, meaning kth element can only be located in Section 2 or 4 because...
 # 	- Subcase: a[m/2] > b[n/2], then b[n/2] must be < kth element and kth element can't be in Section 3
 # 		* e.g. A = [6,7,8,9,10] | B = [1,2,3,4,5]  | m = len(A) = 5 | n = len(B) = 5 | k = 5
 #  			   8 > 3 so 3 < kth element so kth element can't be in section 3 
@@ -45,7 +45,7 @@ class Solution:
 #       * e.g. A = [1,2,3,4,5]  | B = [6,7,8,9,10] | m = len(A) = 5 | n = len(B) = 5 | k =  5
 #              3 < 8 so 3 < kth element so kth element can't be in Section 1
 #
-# Case: m/2 + n/2 > k, meaning kth element can only be located in Section 1 or 3 because...
+# Case: a[m/2] + b[n/2] > k, meaning kth element can only be located in Section 1 or 3 because...
 # 	- Subcase: a[m/2] > b[n/2], then a[m/2] must be > kth element and kth element can't be in Section 2
 #		* e.g. A = [6,7,8,9,10] | B = [3,4,5] | m = len(A) = 3 | n = len(B) = 5 | k = 2
 #			   8 > 4 so 8 > kth element so kth element can't be in section 2
