@@ -14,12 +14,20 @@ class Solution(object):
         """
         if not nums:
             return 0
-        nums.sort()
-        for i in xrange(len(nums)):
-            if i > 0:
-                while i < len(nums) and nums[i] == nums[i-1]:
-                    del nums[i]
-        return len(nums)    
+        i = 0
+        j = 1
+        while j < len(nums):
+            if nums[i] == nums[j]:
+                j += 1
+            else:
+                i += 1
+                nums[i] = nums[j]
+                j += 1
+        return i + 1
 
-# Solution: Since the array is sorted, just delete all matching adjacent elements. Time complexity
-# is O(n) and space complexity is O(1).
+# Solution: Have 2 pointers start at the first and second element of the array. Traverse
+# the array with the second pointer and whenever a non-duplicate element is encountered,
+# move the first pointer over an element, overwrite where it points with the non-duplicate
+# that the second pointer is pointing at, then increment the index of the second pointer.
+# Return the first pointer + 1 (since 0 indexing). Time complexity is O(n) and space
+# complexity is O(1)
