@@ -22,6 +22,9 @@ def is_palindrome(s):
     return True
 
 def get_palindrome_pairs(words):
+    """
+    Returns a set of all pairs of words that form a palindrome when concatenated together
+    """
     t = trie({w[::-1]:0 for w in words})
     result = set()
 
@@ -36,8 +39,8 @@ def get_palindrome_pairs(words):
     return result
 
 # Solution: Create a trie containing all words inserted in reversed order. Then for each original
-# word you have, check if any prefix if the word is in the trie. If it is, check if the suffix is
-# a palindrome (if there is one). If both of these conditions are true, then add to a set the tuple
+# word you have, check if any prefix in the word is in the trie. If it is, check if the suffix is
+# a palindrome (if there is one). If both of these conditions are true, then add to resulting set the tuple
 # of the reversed prefix (the word in the trie) and the word you're currently checking prefixes
 # of (first entry should be ordered first lexigraphically). Assuming k is the length of the longest
 # word in our list, time complexity is O(nk) to build the trie and O(n*2k) to check for all pairs, so
