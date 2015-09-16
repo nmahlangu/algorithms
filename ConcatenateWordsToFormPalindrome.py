@@ -35,8 +35,6 @@ def get_palindrome_pairs(words):
                         result.add(tup)
     return result
 
-print get_palindrome_pairs(["run","nurses","race","car","ma","am", "apple", "a"])
-
 # Solution: Create a trie containing all words inserted in reversed order. Then for each original
 # word you have, check if any prefix if the word is in the trie. If it is, check if the suffix is
 # a palindrome (if there is one). If both of these conditions are true, then add to a set the tuple
