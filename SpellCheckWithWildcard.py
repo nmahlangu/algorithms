@@ -1,3 +1,19 @@
+# You're given an array of strings. The first is setup() which preprocesses
+# the list of words to your liking. The second is isMember(), which takes
+# and word and returns whether or not the word exists in the dictionary. 
+# The word passed to isMember may contain a wildcard (represented as a period),
+# which match exactly one character, but any character value. Finally,
+# words may contain any number of dots in any position.
+#
+# Examples
+# trie = Trie()
+# words = ["foo", "bar", "baz"]
+# trie.setup(words)
+# trie.is_member("foo", trie.root)      // returns True
+# trie.is_member("garply", trie.root)   // returns False
+# trie.is_member("f.o", trie.root)      // returns True
+# trie.is_member("..", trie.root)       // returns False (there are no 2 letter words)
+
 class Node:
     def __init__(self):
         self.is_word = False
@@ -22,36 +38,21 @@ class Trie:
     def setup(self, words):
         for word in words:
             self.insert(word, self.root)
-    
-    def print_trie(self, s, node):
-        if node.is_word:
-            print s
-
-        for c in node.children:
-            self.print_trie(s + c, node.children[c])
 
     def is_member(self, word, node):
         if not word:
-            # if we're at the end of the word
             return node.is_word
 
         let = word[0]
-        if let == '*':
+        if let == '.':
             # wildcard, search each child of this node
             for child in node.children:
                 if self.is_member(word[1:], node.children[child]):
                     return True
             return False
+        return self.is_member(word[1:], node.children[let]) if let in node.children else False
 
-        if let in node.children:
-            return self.is_member(word[1:], node.children[let])
-        else:
-            return False    
-
-trie = Trie()
-words = ["foo", "bar", "baz"]
-trie.setup(words)
-print trie.is_member("foo", trie.root)
-print trie.is_member("garply", trie.root)
-print trie.is_member("f*o", trie.root)
-print trie.is_member("**", trie.root)
+# Solution: Implement a trie class and throw all of the words into the trie. In the
+# implementation of is_member, whenever you encounter a wildcard character, recurse
+# and search each child of the current node. Time complexity is O(n*k) and space complexity 
+# is O(alphabet size * key length * n) = O(26 * k * n) = O(k*n).
