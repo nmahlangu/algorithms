@@ -3,13 +3,15 @@
 # Your job is to write a function that groups together all contacts which
 # share any email together.
 # 
-# For example:
-# c1: shuw@fb.com, shu@gmail.com
-# c2: bob@fb.com
-# c3: shu@gmail.com, shuwu@yahoo.com
-# c4: shuwu@yahoo.com
-# c5: bob@fb.com
-# c6: jamie@fb.com
+# For example, given the following input:
+#   c1: nickm@harvard.edu, nick@gmail.com
+#   c2: malcolm@harvard.edu
+#   c3: nick@gmail.com, nickmahlangu@yahoo.com
+#   c4: nickmahlangu@yahoo.com
+#   c5: malcolm@harvard.edu
+#   c6: allison@harvard.edu
+# The solution would be:
+# [(c1,c3,c4), (c2,c5), (c6)]
 
 from sets import Set
 
