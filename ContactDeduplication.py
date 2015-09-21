@@ -1,9 +1,13 @@
+# You're given an address book which contains a list of contacts combined
+# from different sources. Each contact has 1 or more email addresses.
+# Your job is to write a function that groups together all contacts which
+# share any email together.
+
 from sets import Set
 
 class Contact:
-    def __init__ (self, emails, name):
+    def __init__ (self, emails):
         self.emails = emails
-        self.name   = name
 
 def dfs(email_dict, contact, seen):
     found = []
@@ -30,24 +34,12 @@ def deduplicate(contacts):
     seen = set()
     return filter(None, [dfs(email_dict, contact, seen) for contact in contacts])
 
-
-def run_test():
-    c1 = Contact(["shuw@fb.com", "shu@gmail.com"], "c1")
-    c2 = Contact(["bob@fb.com"], "c2")
-    c3 = Contact(["shu@gmail.com", "shuwu@yahoo.com"], "c3")
-    c4 = Contact(["shuwu@yahoo.com"], "c4")
-    c5 = Contact(["bob@fb.com"], "c5")
-    c6 = Contact(["jamie@fb.com"], "c6")
-    contacts = [c1,c2,c3,c4,c5,c6]
-    deduplicate(contacts)
-
-    res = deduplicate(contacts)
-    for i, item in enumerate(res):
-        print "Group %d: " % (i+1)
-        for person in item:
-            print person.name
-        print
-run_test()
+# Good solution: Consider each contact a node and an edge exists between 2 nodes
+# if they share at least 1 email. Using this representation, each connected component
+# will be 1 group. Implementation-wise, run DFS from every node, making sure to keep
+# track of any element that's been seen so far. Because DFS will return None if the
+# root has been seen, filter out empty groups. Time complexity is O(v+e), where 'v' is
+# the number of nodes and 'e' is the number of edges.
 
 class Node():
     def __init__ (self, value):
@@ -94,4 +86,15 @@ def deduplicate(contacts):
         result[parent].append(node.value)
     return result.values()
 
-run_test()
+# Best solution: Use a disjoint-set data structure with union by rank and path compression.
+# Time complexity is amortized O(v), where 'v' is the total number of emails in all contacts.
+#
+# Notes: In this data structure, each set is represented by a tree, so that each element points
+# to a parent in the tree. Furthermore, the root of the tree will point to itself. To keep
+# trees short, we two heuristics known as union by rank and path compression. In union by rank,
+# each element initially has a rank of 0. When 2 elements are unioned together (call them A and B),
+# one of two things happens: if they have the same rank, point B's root's parent pointer at A and
+# increment A's rank by 1; if they have different rank, point the shorter one's root's parent pointer
+# at the longer one's root. In path compression, the idea is that once we perform a find on some
+# element, we should adjust its parent pointer so that it points directly to the root. That way, if
+# we ever do another find on it, we start out much closer to the root.
