@@ -87,7 +87,8 @@ def deduplicate(contacts):
     return result.values()
 
 # Best solution: Use a disjoint-set data structure with union by rank and path compression.
-# Time complexity is amortized O(v), where 'v' is the total number of emails in all contacts.
+# Time complexity is amortized O(v), where 'v' is the total number of emails in all contacts,
+# and space compexity is O(n), where n is the number of contacts.
 #
 # Notes: In this data structure, each set is represented by a tree, so that each element points
 # to a parent in the tree. Furthermore, the root of the tree will point to itself. To keep
