@@ -2,6 +2,14 @@
 # from different sources. Each contact has 1 or more email addresses.
 # Your job is to write a function that groups together all contacts which
 # share any email together.
+# 
+# For example:
+# c1: shuw@fb.com, shu@gmail.com
+# c2: bob@fb.com
+# c3: shu@gmail.com, shuwu@yahoo.com
+# c4: shuwu@yahoo.com
+# c5: bob@fb.com
+# c6: jamie@fb.com
 
 from sets import Set
 
