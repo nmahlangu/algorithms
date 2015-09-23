@@ -27,6 +27,6 @@ def get_smaller_nums_helper(n, numbers, res):
 
 # Solution: Recursively build up every possibe permutation of the numbers.
 # When in the base case, check if the result is less than or equal to the
-# input. If it is, add it to the resulting set. Time complexity is O(m),
+# input. If it is, add it to the resulting set. Time complexity is O(m!),
 # where m is the number of digits in the input number, space complexity is
 # O(1).
