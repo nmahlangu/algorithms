@@ -16,7 +16,7 @@ def get_smaller_nums(n):
 
 def get_smaller_nums_helper(n, numbers, res):
     if not numbers:
-        if res <= n:
+        if res < n:
             global result
             result.add(res)
         return
@@ -24,12 +24,6 @@ def get_smaller_nums_helper(n, numbers, res):
     for i in xrange(len(numbers)):
         new_nums = [numbers[j] for j in xrange(len(numbers)) if j != i]
         get_smaller_nums_helper(n, new_nums, (res * 10) + numbers[i])
-
-tests = [123, 332, 987]
-for test in tests:
-    result = set()
-    get_smaller_nums(test)
-    print "%d: " % (test), list(result)
 
 # Solution: Recursively build up every possibe permutation of the numbers.
 # When in the base case, check if the result is less than or equal to the
