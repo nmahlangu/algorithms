@@ -74,27 +74,5 @@ def flatten(node):
 
 # Better solution: You want to merge each individual linked list the recursively
 # flattened and merged result of everything to its right. The base case
-# for flatten is when there's nothing to the giving linked list's right.
+# for flatten is when there's nothing to the given linked list's right.
 # Time complexity is O(n) and space complexity is O(1).
-
-def print_list(node):
-    if not node:
-        return
-    print node.value,
-    curr = node.down
-    while curr:
-        print "->%d" % (curr.value),
-        curr = curr.down
-    print
-
-a = Node(5,Node(7,Node(8,Node(30))))
-b = Node(10,Node(20))
-c = Node(19,Node(22,Node(50)))
-d = Node(28,Node(40,Node(40,Node(45))))
-a.right = b
-b.right = c
-c.right = d
-
-print_list(flatten(a))
-
-            
