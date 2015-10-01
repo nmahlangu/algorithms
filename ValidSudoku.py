@@ -1,41 +1,49 @@
+# Determine if a Sudoku board is valid.
+# The Sudoku board could be partially filled, where empty cells are
+# filled with the character '.'
+
 from sets import Set
 
 class Solution(object):
+    def __init__(self):
+        self.width = self.height = 9
+
     def isValidSudoku(self, board):
         """
         :type board: List[List[str]]
         :rtype: bool
         """
-        if not board:
-            return False
-        valid = set([str(n+1) for n in xrange(9)])
-        for i in xrange(len(board)):
-            row_seen = set()
-            for j in xrange(len(board[i])):
-                n = board[i][j]
-                if n in valid:
-                    if n not in row_seen:
-                        row_seen.add(n)
-                    else:
-                        return False
-        for i in xrange(len(board[0])):
-            col_seen = set()
-            for j in xrange(len(board)):
-                n = board[j][i]
-                if n in valid:
-                    if n not in col_seen:
-                        col_seen.add(n)
-                    else:
-                        return False
+        # check rows and columns
+        for i in xrange(self.height):
+            row = set()
+            col = set()
+            for j in xrange(self.width):
+                # row
+                if board[i][j] in row:
+                    return False
+                elif board[i][j] != '.':
+                    row.add(board[i][j])
+        
+                # col
+                if board[j][i] in col:
+                    return False
+                elif board[j][i] != '.':
+                    col.add(board[j][i])
+
+        # check blocks
+        for i in xrange(0, self.height, 3):
+            for j in xrange(0, self.width, 3):
+                block = set()
+                for ii in xrange(i,i+3):
+                    for jj in xrange(j,j+3):
+                        if board[ii][jj] in block:
+                            return False
+                        elif board[ii][jj] != '.':
+                            block.add(board[ii][jj])
         return True
 
-arr = ["....5..1.",
-     ".4.3.....",
-     ".....3..1",
-     "8......2.",
-     "..2.7....",
-     ".15......",
-     ".....2...",
-     ".2.9.....",
-     "..4......"]
-print Solution().isValidSudoku(arr)
+# Solution: Iterate through the board with 2 nested for loops (one can cleverly
+# check rows and columns simultaneously). If there's any duplicates in a row
+# or columns, return False. To check each block, start from the top left and
+# check each row of blocks to see if they're valid. Time complexity is
+# O(n^2) and space complexity is O(1).
