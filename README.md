@@ -1,3 +1,3 @@
 # Algorithms
 
-My solutions to algorithm questions on https://www.leetcode.com/ and other websites!
+My solutions and explanations to random algorithm quetions found on leetcode and other corners of the internet
