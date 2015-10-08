@@ -46,5 +46,4 @@ class Solution(object):
 # check rows and columns simultaneously). If there's any duplicates in a row
 # or columns, return False. To check each block, start from the top left and
 # check each row of blocks to see if they're valid. Time complexity is
-# O(n) and space complexity is O(1).
-
+# O(n^2) and space complexity is O(1).
