@@ -42,4 +42,5 @@ def print_helper(node,result):
 # print out will be of length log(n), (that's the height of a 
 # balanced tree); in a linked-list like tree, time complexity is 
 # O(n^2) since the longest path will be of length n. Space complexity 
-# is O(1).
+# is O(1). However, ignoring printing the time complexity is O(n)
+# and the space complexity is O(1).
