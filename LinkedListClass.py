@@ -1,6 +1,6 @@
 # Implement a class for a linked list that supports printing the list, adding
-# to the tail, adding to the head, removing an element, mapping over the list,
-# and reducing over it.
+# to the tail, adding to the head, removing an element, and mapping a function
+# over the entire list.
 
 class Node:
     def __init__(self,value=None):
