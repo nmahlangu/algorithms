@@ -8,14 +8,6 @@ class Node:
         self.left = None
         self.right = None
 
-a = Node('a')
-a.left = Node('b')
-a.left.left = Node('d')
-a.left.right = Node('e')
-a.right = Node('c')
-a.right.left = Node('f')
-a.right.right = Node('g')
-
 ########################## DFS ##########################
 
 # preorder
