@@ -20,7 +20,6 @@ def gen_permutations(s):
     gen_perm_helper([ch for ch in s],"")
     return result
 
-print len(gen_permutations("abcd"))
 # Solutions: Recursively build the string up, one character at a time.
 # When you have no more characters to use, store the resulting string.
 # Time complexity is O(n!), where n is the number of characters in the string
