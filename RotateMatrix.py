@@ -1,6 +1,7 @@
 # Given an image represented by an n x n matrix, where each pixel is 4
 # bytes, write a method to rotate the image by 90 degrees left and
 # a method to rotate the image by 90 degrees to the right.
+# Cracking The Code: 1.7
 
 def transpose(arr):
     if not arr:
