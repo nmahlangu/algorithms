@@ -1,5 +1,6 @@
 # Write an algorithm such that if an element in an m x n matrix
 # is 0, its entire row and column are set to zero.
+# Cracking The Code: 1.8
 
 # helper function to zero out a row
 def zero_row(arr,row):
