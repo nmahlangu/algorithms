@@ -52,7 +52,7 @@ def rotate_right(arr):
 # Solution: To rotate the image left 90 degrees, first transpose
 # the image and then reverse the order of the rows. To rotate the
 # image right 90 degrees, first transpose the image and then reverse
-# the order of the columns. Time complexity is O(n^2), since touch
+# the order of the columns. Time complexity is O(n^2), since touching
 # each element once during transposition and once during row/column
-# swap, and space complexity is O(1) since you can do everything
+# swap, and space complexity is O(1), since you can do everything
 # in place.
