@@ -29,5 +29,6 @@ class Solution(object):
 
 # Solution: Throw the head of each list into a Priority Queue. While the queue is not empty,
 # pop and append the next element to the tail of the new linked list, making sure to throw it's
-# next element into the priority queue when it is taken out. Time complexity is O(nlog(k)) and
-# space complexity is O(1) (since it's storing at most k nodes)
+# next element into the priority queue when it is taken out. Time complexity is O(nklog(k)),
+# where n is the number of lists and k is the length of the longest list, and
+# space complexity is O(n) (since priority queue is storing at most n nodes)
