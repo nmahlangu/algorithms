@@ -57,9 +57,6 @@ def zero_matrix(arr):
 
     return arr
 
-arr1 = [[0,1,1],[1,1,1],[0,1,1]]
-print zero_matrix(arr1)
-
 # Solution: 
 # 1) Check if the first row and first column have any zeroes, and
 #    set variables first_row_has_zero and first_row_has_col accordingly
