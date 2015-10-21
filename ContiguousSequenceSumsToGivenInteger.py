@@ -1,6 +1,6 @@
 # Given a sorted sequence of integers and a target sum, write a function
 # that returns whether a contiguous subsequence of the sequence sums
-# up to the total.
+# up to the target.
 #
 # sequence  | total
 # ----------------
