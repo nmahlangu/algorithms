@@ -28,7 +28,7 @@ def rotate_left(arr):
     arr = transpose(arr)
 
     # reverse order of the rows
-    for i in xrange(len(arr)):
+    for i in xrange(len(arr)/2):
         for j in xrange(len(arr[0])):
             tmp = arr[i][j]
             arr[i][j] = arr[len(arr)-i-1][j]
