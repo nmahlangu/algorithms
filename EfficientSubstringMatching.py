@@ -45,4 +45,6 @@ def rabin_karp(s1,s2):
 #                       of s2 with the hash value of the current substring of s1 and only if 
 #                       they match are the strings actually compared. Using a rolling hash, 
 #                       the best and average case running time of Rabin-Karp is O(n+m), however 
-#                       worst case is still O(nm). The space complexity is O(1).
+#                       worst case is still O(nm). The space complexity is O(1). Note: The
+#                       hash function used above is the sum of the string where the string
+#                       is a base 256 number.
