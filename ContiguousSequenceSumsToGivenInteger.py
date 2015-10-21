@@ -7,7 +7,7 @@
 # [1,2,3,4] | 5     -> True
 # [1,2,3,4] | 6     -> True
 # [1,2,3,4] | 10     -> True
-# [1,2,5,9] | 10     -> True
+# [1,2,5,9] | 10     -> False
 
 
 from sets import Set
