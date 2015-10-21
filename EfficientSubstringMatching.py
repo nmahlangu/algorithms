@@ -6,7 +6,7 @@
 # "AABAACAADAABAAABAA", "AABA" -> 0, 9, 13
 
 # constants
-prime = 123
+prime = 211
 alpha_len = 256
 
 def rabin_karp(s1,s2):
