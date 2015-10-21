@@ -2,7 +2,7 @@
 # appears in the array.
 #
 # For example
-# [1,2,2,4] -> 2
+# [1,2,2,2,4], 2 -> 3
 
 low = float('inf')
 high = -float('inf')
