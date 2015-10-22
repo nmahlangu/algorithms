@@ -2,7 +2,7 @@
 # the number of unique triples that sum to less than the target.
 #
 # For example
-# [1,2,3,4], 9 -> [(1,2,3),(1,2,4),(1,3,4)] -> 3
+# [4,2,1,3], 9 -> [(1,2,3),(1,2,4),(1,3,4)] -> 3
 
 def count(arr,target):
     # error checking
