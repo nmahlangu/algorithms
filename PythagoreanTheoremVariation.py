@@ -5,7 +5,7 @@ import math
 
 def pythagorean(c):
     # error checking
-    if c <= 0:
+    if c < 0:
         return (-1,-1)
 
     # case 1
@@ -26,10 +26,8 @@ def pythagorean(c):
             end -= 1
     return (-1,-1)
 
-print pythagorean(4)
-
 # Solution: First check if sqrt(c) is an integer - if it is, return (c,c).
-# Else, we know the bounds of numbers that [a,b] can be in are [1,sqrt(c)],
+# Else, we know the bounds of numbers that [a,b] can be in are [0,sqrt(c)],
 # so initialize a as 1 and b as sqrt(q). Repeat the following until b < a. 
 # Compute the sum of a^2 + b^2. If it's less than c, increment a. If it's 
 # greater than target, decrement b. If it's equal to c, return (a,b).
