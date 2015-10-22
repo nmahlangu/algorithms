@@ -10,7 +10,7 @@ def pythagorean(c):
 
     start = 1
     end = int(math.sqrt(c))
-    while start < end:
+    while start <= end:
         var_sum = start**2 + end**2
         if var_sum == c:
             return (start,end)
