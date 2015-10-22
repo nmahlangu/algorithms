@@ -1,4 +1,4 @@
-# Given an integer c, return tuple (a,b)  such that a^2 + b^2 = c. If this is
+# Given an integer c, return tuple (a,b) such that a^2 + b^2 = c and a != b. If this is
 # not possible, return (-1,-1).
 
 import math
@@ -10,7 +10,7 @@ def pythagorean(c):
 
     start = 1
     end = int(math.sqrt(c))
-    while start <= end:
+    while start < end:
         var_sum = start**2 + end**2
         if var_sum == c:
             return (start,end)
