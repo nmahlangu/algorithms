@@ -49,6 +49,7 @@ class ADTWL:
                     node.prev.next = node.next
                 if node.next:
                     node.next.prev = node.prev
+                node.prev = None
                 self.move_to_head(node)
                 return node.val
         return None
@@ -77,4 +78,4 @@ class ADTWL:
 # places it at the head of the listed. get() returns the value of the key passed
 # in and moves the node to the head of the list. delete() deletes the node with
 # the corresponding key in the double linked list. last() returns the key of 
-# the node at the head of the list
+# the node at the head of the list.
