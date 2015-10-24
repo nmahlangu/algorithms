@@ -31,12 +31,11 @@ def count(arr,target):
     bsearch(arr,0,len(arr)-1,target)
     global low, high
 
-    # element is not in array
-    if low == float('inf'):
+    if low == float('inf'): # element is not in array
         return 0
-    elif low == high:
+    elif low == high:       # element is in array once
         return 1
-    else:
+    else:                   # element is in array more than once
         return high-low+1
 
 # Solution: Implement a modified version of binary search as follows. At
