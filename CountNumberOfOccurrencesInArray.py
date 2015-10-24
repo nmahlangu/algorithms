@@ -35,7 +35,7 @@ def count(arr,target):
         return 0
     elif low == high:       # element is in array once
         return 1
-    else:                   # element is in array > once
+    else:                   # element is in array more than once
         return high-low+1
 
 # Solution: Implement a modified version of binary search as follows. At
