@@ -47,4 +47,4 @@ class Solution(object):
 # have 2 pointers at the next element (start) and the last element of the array (end), respectively. If the 4
 # numbers at those indices sum to the target, store an array of those 4 numbers. If the numbers to more than the
 # target, move the end pointer left one element. If the numbers sum to less than the target, move the start pointer
-# right one element. Time complexity is O(n^3) and space complexity is O(n).
+# right one element. Time complexity is O(n^3) and space complexity is O(1).

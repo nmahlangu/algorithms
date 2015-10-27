@@ -11,7 +11,6 @@ def search(arr,target):
     j = n - 1
     while i < n and j >= 0:
         elt = arr[i][j]
-        print elt
         if elt == target:
             return True
         elif arr[i][j] < target:

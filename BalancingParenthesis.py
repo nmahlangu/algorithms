@@ -21,4 +21,5 @@ def balance(s):
 # Solution: Each time you see a '(' push it onto the stack. Each time you see a ')', try to pop
 # from the stack. If the stack is empty when trying to pop, the current ')' in the string does not 
 # have a corresponding '(', meaning that it can be deleted. Finally, any leftover '(' in the stack
-# can also be deleted since they have no corresponding ')' character. 
+# can also be deleted since they have no corresponding ')' character. Time complexity is O(n) and
+# space complexity is O(n).
