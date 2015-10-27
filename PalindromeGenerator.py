@@ -22,8 +22,8 @@ def palindrome_gen(words):
 
     for i, item in enumerate(words):
         for j in xrange(len(item)):
-            left = item[:j]
-            right = item[j:]
+            left = item[:j+1]
+            right = item[j+1:]
             if left[::-1] in words and is_palindrome(right):
                 result.add((min(item,left[::-1]),max(item,left[::-1])))
             elif is_palindrome(left) and right[::-1] in words:
