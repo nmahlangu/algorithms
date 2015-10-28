@@ -9,10 +9,8 @@ min_dict = {}
 def min_edit_distance(s1,s2):
     # base case
     if not s1:
-        print min_dict
         return len(s2)
     elif not s2:
-        print min_dict
         return len(s1)
 
     # recursive case
