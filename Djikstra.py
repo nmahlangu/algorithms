@@ -18,6 +18,12 @@ def djikstra(start,end,edge_weight):
         for child in node.children:
             if path_weight[node] + edge_weight[(node,child)] < path_weight[child]:
                 path_weight[child] = path_weight[node] + edge_weight[(node,child)]
-                # TODO update pqueue path_weight of child 
-                pqueue.append((path_weight[child],child))
+                # TODO update pqueue path_weight of child
+                try:
+                    pqueue.get(child)
+                except:
+                    # do nothing
+                pqueue.put((path_weight[child],child))
                 previous[child] = node
+
+    # TODO: retrace path from end to start (if possible)
