@@ -1,7 +1,7 @@
 # Given a dictionary, find all pairs of words that, when concatenated 
 # together, form a palindrome.
 #
-# E.g. [(nurses, runs),(none,xenon)]
+# E.g. [(nurses, run), (none, xenon)]
 
 from sets import Set
 
