@@ -7,11 +7,13 @@ def iter_powerset(arr):
         num = i
         partial = []
         j = 0
+
         while num > 0:
             if num & 1:
                 partial.append(arr[j])
             j += 1
             num >>= 1
+            
         result.append(partial)
     return result
 
