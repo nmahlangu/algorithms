@@ -3,10 +3,9 @@ l = []
 l.append(1)             # add to array
 l[0]                    # access element
 if 1 in l:    
-   print "Contains 1"   # check if contains element
+   print("Contains 1")   # check if contains element
 
 # set
-from sets import Set
 s = set()
 s.add(1)                # add an element
 s.remove(1)             # remove an element
@@ -22,7 +21,7 @@ q.append(1)             # enqueue an element
 q.pop(0)                # dequeue an element
 
 # priority queue
-from Queue import PriorityQueue
+from queue import PriorityQueue
 pq = PriorityQueue()
 pq.put((0,"Nicholas"))  # add an element (first element in tuple is priority)
 pq.empty()              # check if empty
@@ -30,6 +29,9 @@ pq.qsize()              # get size
 pq.get()                # dequeue an element (using priority)
 
 # trie
+#
+# install with `pip install pytrie`
+# https://pytrie.readthedocs.io/en/latest/
 from pytrie import SortedStringTrie as trie
 t = trie({'all': 2, 'allot': 3, 'alloy': 4, 'aloe': 5, 'an': 0, 'ant': 1, 'are': 6, 'be': 7}) # arg is a dict
 t.keys('al')                           # get keys prefixed by 'al'
