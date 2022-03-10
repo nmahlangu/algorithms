@@ -49,7 +49,7 @@ t.iter_prefix_items('al')              # get iterator over the items ((key,value
 # https://docs.python.org/3/library/heapq.html
 import heapq
 heap = [1,4,2,7,4,3,8,9]
-heapq.heapify(h)  		    # transform list x into a heap, in-place, in linear time 
+heapq.heapify(h)            # transform list x into a heap, in-place, in linear time 
 h[0]                        # access the smallest item without popping it
 heapq.heappop(h)            # pop and return the smallest item from the heap, maintaining the heap invariant (IndexError is raised if heap empty)
 heapq.heappush(h, 15)       # push the value 15 onto the heap, maintaining the heap invariant
