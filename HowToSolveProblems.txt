@@ -13,4 +13,3 @@
 11) Scan code line-by-line for compilation bugs
 12) Test multiple small cases, then edge cases
 13) Discuss how your solution(s) scale with larger input
-
