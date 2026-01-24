@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
 
     def sortColors(self, nums):
@@ -29,9 +30,10 @@ class Solution:
         for i in range(index, len(nums)):
             if nums[i] == 1:
                 nums[index], nums[i] = nums[i], nums[index]
-                index += 1 
+                index += 1
 
         return nums
 
+
 s = Solution()
-assert s.sortColors([2,1,2,0,1,0,1,0,1]) == [0,0,0,1,1,1,1,2,2]
+assert s.sortColors([2, 1, 2, 0, 1, 0, 1, 0, 1]) == [0, 0, 0, 1, 1, 1, 1, 2, 2]
