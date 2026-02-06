@@ -8,7 +8,7 @@ class Solution:
         max_len: int = 0
 
         for i, char in enumerate(s):
-            if char == '(':
+            if char == "(":
                 stack.append(i)
             else:
                 stack.pop()
@@ -18,6 +18,7 @@ class Solution:
                     max_len = max(max_len, i - stack[-1])
 
         return max_len
+
 
 class TestSolution(unittest.TestCase):
     def test_example1(self):

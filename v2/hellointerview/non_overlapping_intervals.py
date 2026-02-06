@@ -14,5 +14,3 @@ class Solution:
                 end = intervals[i][1]
 
         return len(intervals) - count
-        
-        

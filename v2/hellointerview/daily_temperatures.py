@@ -1,6 +1,7 @@
 import unittest
 from typing import *
 
+
 class Solution:
     def dailyTemperatures(self, temps: list[int]):
         result: list[int] = [0] * len(temps)
@@ -15,10 +16,11 @@ class Solution:
 
         return result
 
+
 class TestSolution(unittest.TestCase):
     def test_example1(self):
         actual = Solution().dailyTemperatures([65, 70, 68, 60, 55, 75, 80, 74])
-        self.assertEqual([1,4,3,2,1,1,0,0], actual)
+        self.assertEqual([1, 4, 3, 2, 1, 1, 0, 0], actual)
 
 
 if __name__ == "__main__":

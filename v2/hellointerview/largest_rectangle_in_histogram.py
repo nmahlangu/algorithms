@@ -1,6 +1,7 @@
 import unittest
 from typing import *
 
+
 class Solution:
     def largestRectangleArea(self, heights: list[int]):
         # stores indexes, present here means we are looking for a lower index to the right
@@ -28,9 +29,10 @@ class Solution:
 
         return max_area
 
+
 class TestSolution(unittest.TestCase):
     def test_example1(self):
-        actual = Solution().largestRectangleArea([2,8,5,6,2,3])
+        actual = Solution().largestRectangleArea([2, 8, 5, 6, 2, 3])
         self.assertEqual(15, actual)
 
 

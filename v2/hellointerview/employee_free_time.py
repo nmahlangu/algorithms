@@ -1,5 +1,6 @@
 import unittest
 
+
 class Solution:
     def employeeFreeTime(self, schedule: list[list[list[int]]]):
         if not schedule:
@@ -21,14 +22,15 @@ class Solution:
 
         result: list[tuple] = []
         for i in range(len(merged) - 1):
-            result.append((merged[i][1], merged[i+1][0]))
+            result.append((merged[i][1], merged[i + 1][0]))
 
         return result
 
+
 class TestSolution(unittest.TestCase):
     def test_example1(self):
-        actual = Solution().employeeFreeTime([[[2,4],[7,10]],[[1,5]],[[6,9]]])
-        self.assertEqual([(5,6)], actual)
+        actual = Solution().employeeFreeTime([[[2, 4], [7, 10]], [[1, 5]], [[6, 9]]])
+        self.assertEqual([(5, 6)], actual)
 
 
 if __name__ == "__main__":

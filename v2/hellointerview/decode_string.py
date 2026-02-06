@@ -1,5 +1,6 @@
 import unittest
 
+
 class Solution:
     def decodeString(self, s: str):
         current_str: str = ""
@@ -24,10 +25,12 @@ class Solution:
 
         return current_str
 
+
 class TestSolution(unittest.TestCase):
     def test_example1(self):
         actual = Solution().decodeString("3[a2[c]]")
         self.assertEqual("accaccacc", actual)
+
 
 if __name__ == "__main__":
     unittest.main()
