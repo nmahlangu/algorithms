@@ -1,6 +1,7 @@
 import heapq
 import unittest
 
+
 class Solution:
     def kthLargest(self, nums: list[int], k: int):
         if not nums:
@@ -15,6 +16,7 @@ class Solution:
 
         return heap[0]
 
+
 class TestSolution(unittest.TestCase):
     def test_example1(self):
         actual = Solution().kthLargest([5, 3, 2, 1, 4], 2)
@@ -23,4 +25,3 @@ class TestSolution(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

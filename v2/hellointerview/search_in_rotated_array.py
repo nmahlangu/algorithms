@@ -1,5 +1,6 @@
 import unittest
 
+
 class Solution:
     def search(self, nums: list[int], target: int) -> int:
         left: int = 0
@@ -28,14 +29,16 @@ class Solution:
 
         return -1
 
+
 class TestSolution(unittest.TestCase):
     def test_example1(self):
-        actual = Solution().search([4,5,6,7,0,1,2], 0)
+        actual = Solution().search([4, 5, 6, 7, 0, 1, 2], 0)
         self.assertEqual(4, actual)
 
     def test_example2(self):
-        actual = Solution().search([4,5,6,7,0,1,2], 3)
+        actual = Solution().search([4, 5, 6, 7, 0, 1, 2], 3)
         self.assertEqual(-1, actual)
+
 
 if __name__ == "__main__":
     unittest.main()

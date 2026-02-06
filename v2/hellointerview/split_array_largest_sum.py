@@ -1,5 +1,6 @@
 import unittest
 
+
 class Solution:
     # greedy approach to making splits < k, returns # splits
     def arr_to_min_splits_given_k(self, nums: list[int], k: int) -> int:
@@ -15,7 +16,6 @@ class Solution:
 
         return splits
 
-
     def splitArray(self, nums: list[int], k: int):
         left: int = max(nums)
         right: int = sum(nums)
@@ -28,6 +28,7 @@ class Solution:
                 right = mid
 
         return left
+
 
 class TestSolution(unittest.TestCase):
     def test_example1(self):
