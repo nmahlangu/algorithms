@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def bfs(root):
     if not root:
         return []

@@ -9,6 +9,7 @@ the distance to the nearest 0 in the original matrix. The distance between two a
 cells is 1. If there is no 0 in the grid, return -1 for each cell.
 """
 
+
 class Solution:
     def updateMatrix(self, mat: List[List[int]]):
         if not mat:
@@ -26,7 +27,7 @@ class Solution:
                     queue.append((i, j))
 
         distance: int = 1
-        directions: list[tuple[int, int]] = [(1, 0), (-1, 0), (0, 1), (0, -1)] 
+        directions: list[tuple[int, int]] = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
         while queue:
             for _ in range(len(queue)):

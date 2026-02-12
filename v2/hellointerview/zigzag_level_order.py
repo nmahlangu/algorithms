@@ -1,10 +1,12 @@
 from collections import deque
 
+
 class TreeNode:
-    def __init__(self, val: int, left: 'TreeNode' = None, right: 'TreeNode' = None):
+    def __init__(self, val: int, left: "TreeNode" = None, right: "TreeNode" = None):
         self.val = val
         self.left = left
         self.right = right
+
 
 class Solution:
     def zig_zag(self, root: TreeNode):
@@ -36,4 +38,3 @@ class Solution:
             left_to_right = not left_to_right
 
         return result
-

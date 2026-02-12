@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def surrounded_regions(self, grid: List[List[str]]):
         if not grid:
@@ -18,10 +19,10 @@ class Solution:
 
         for row in range(rows):
             for col in range(cols):
-                if grid[row][col] == 'S':
-                    grid[row][col] = 'O'
-                elif grid[row][col] == 'O':
-                    grid[row][col] = 'X'
+                if grid[row][col] == "S":
+                    grid[row][col] = "O"
+                elif grid[row][col] == "O":
+                    grid[row][col] = "X"
 
         return grid
 
@@ -29,10 +30,10 @@ class Solution:
         if row < 0 or row > len(grid) - 1 or col < 0 or col > len(grid[0]) - 1:
             return
 
-        if grid[row][col] != 'O':
+        if grid[row][col] != "O":
             return
 
-        grid[row][col] = 'S'
+        grid[row][col] = "S"
         coords: List[tuple[int, int]] = [(1, 0), (-1, 0), (0, 1), (0, -1)]
         for r, c in coords:
             self.dfs_mark_s(row=row + r, col=col + c, grid=grid)

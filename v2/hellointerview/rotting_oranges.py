@@ -1,6 +1,7 @@
 from typing import *
 from collections import deque
 
+
 class Solution:
     def rotting_oranges(self, grid: List[List[str]]):
         if not grid:

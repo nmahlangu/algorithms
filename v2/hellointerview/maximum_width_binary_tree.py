@@ -1,10 +1,12 @@
 from collections import deque
 
+
 class TreeNode:
-    def __init__(self, val: int, left: 'TreeNode' = None, right: 'TreeNode' = None):
+    def __init__(self, val: int, left: "TreeNode" = None, right: "TreeNode" = None):
         self.val = val
         self.left = left
         self.right = right
+
 
 class Solution:
     def maxWidth(self, root: TreeNode):
@@ -31,4 +33,3 @@ class Solution:
             max_width = max(max_width, lvl_right[1] - lvl_left[1] + 1)
 
         return max_width
-

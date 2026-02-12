@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def pacific_atlantic_flow(self, grid: List[List[int]]) -> list[list[int]]:
         if not grid or not grid[0]:
@@ -32,4 +33,3 @@ class Solution:
             if 0 <= nr < len(grid) and 0 <= nc < len(grid[0]):
                 if grid[nr][nc] >= grid[row][col]:
                     self.dfs(row=nr, col=nc, grid=grid, reachable=reachable)
-

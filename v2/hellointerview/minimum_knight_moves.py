@@ -1,10 +1,19 @@
 from collections import deque
 
+
 class Solution:
     def minimum_knight_moves(self, x: int, y: int):
         queue: deque[tuple[int, int, int]] = deque([(0, 0)])
-        directions: list[tuple[int, int]] = [(2, 1), (2, -1), (-2, 1), (-2, -1),
-                      (1, 2), (1, -2), (-1, 2), (-1, -2)]
+        directions: list[tuple[int, int]] = [
+            (2, 1),
+            (2, -1),
+            (-2, 1),
+            (-2, -1),
+            (1, 2),
+            (1, -2),
+            (-1, 2),
+            (-1, -2),
+        ]
         visited: set[tuple[int, int]] = set()
         lvl_moves: int = 0
 
@@ -26,5 +35,3 @@ class Solution:
             lvl_moves += 1
 
         return -1
-
-
