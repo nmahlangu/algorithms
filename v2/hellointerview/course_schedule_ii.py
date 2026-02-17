@@ -17,9 +17,11 @@ Output True
         # continue until queue empty
         # return processed == len input
 """
+
 from typing import *
 from collections import defaultdict, deque
 import unittest
+
 
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]):
@@ -50,7 +52,7 @@ class TestSolution(unittest.TestCase):
     def test_example1(self):
         actual = Solution().findOrder(3, [[1, 0], [2, 1]])
         self.assertEqual([0, 1, 2], actual)
-    
+
     def test_example2(self):
         actual = Solution().findOrder(2, [[1, 0], [0, 1]])
         self.assertEqual([], actual)

@@ -17,9 +17,11 @@ Output True
         # continue until queue empty
         # return processed == len input
 """
+
 from typing import *
 from collections import defaultdict, deque
 import unittest
+
 
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]):
@@ -50,9 +52,9 @@ class TestSolution(unittest.TestCase):
     def test_example1(self):
         actual = Solution().canFinish(3, [[1, 0], [2, 1]])
         self.assertEqual(True, actual)
-    
+
     def test_example2(self):
-        actual = Solution().canFinish(3, [[1, 0], [0, 1], [1,2]])
+        actual = Solution().canFinish(3, [[1, 0], [0, 1], [1, 2]])
         self.assertEqual(False, actual)
 
 

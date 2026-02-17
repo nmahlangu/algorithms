@@ -24,12 +24,14 @@ class Solution:
 
         return False
 
-    def backtrack(self, board: List[List[str]], row: int, col: int, idx: int, word: str) -> bool:
+    def backtrack(
+        self, board: List[List[str]], row: int, col: int, idx: int, word: str
+    ) -> bool:
         if idx == len(word):
             return True
         elif not (0 <= row < len(board)):
             return False
-        elif not (0 <= col < len(board[0])): 
+        elif not (0 <= col < len(board[0])):
             return False
         elif board[row][col] != word[idx]:
             return False
@@ -38,13 +40,11 @@ class Solution:
         board[row][col] = "#"
 
         found: bool = (
-            self.backtrack(board, row + 1, col, idx + 1, word) or
-            self.backtrack(board, row - 1, col, idx + 1, word) or
-            self.backtrack(board, row, col + 1, idx + 1, word) or
-            self.backtrack(board, row, col - 1, idx + 1, word)
+            self.backtrack(board, row + 1, col, idx + 1, word)
+            or self.backtrack(board, row - 1, col, idx + 1, word)
+            or self.backtrack(board, row, col + 1, idx + 1, word)
+            or self.backtrack(board, row, col - 1, idx + 1, word)
         )
 
         board[row][col] = old_let
         return found
-
-
