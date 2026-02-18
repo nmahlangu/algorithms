@@ -1,12 +1,13 @@
 class TreeNode:
-    def __init__(self, val: int, left: 'TreeNode' = None, right: 'TreeNode' = None):
+    def __init__(self, val: int, left: "TreeNode" = None, right: "TreeNode" = None):
         self.val = val
         self.left = left
         self.right = right
 
+
 class Solution:
     def validateBST(self, root: TreeNode):
-        return self.validate(node=root, min_val=float('-inf'), max_val=float('inf'))
+        return self.validate(node=root, min_val=float("-inf"), max_val=float("inf"))
 
     def validate(self, node: TreeNode, min_val: float, max_val: float) -> bool:
         if not node:

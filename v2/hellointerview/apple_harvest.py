@@ -1,5 +1,6 @@
 import unittest
 
+
 class Solution:
     def calc_harvest_hours(self, apples: list[int], rate: int) -> int:
         hours: int = 0
@@ -21,6 +22,7 @@ class Solution:
 
         return left
 
+
 class TestSolution(unittest.TestCase):
     def test_example1(self):
         actual = Solution().minHarvestRate([25, 9, 23, 8, 3], 5)
@@ -29,5 +31,3 @@ class TestSolution(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
-

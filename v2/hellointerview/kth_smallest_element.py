@@ -1,5 +1,6 @@
 import unittest
 
+
 class Solution:
     def count_less_or_equal(self, matrix: list[list[int]], k: int) -> int:
         # dimensions
@@ -27,7 +28,7 @@ class Solution:
 
         # search space
         left: int = matrix[0][0]
-        right: int = matrix[l-1][w-1]
+        right: int = matrix[l - 1][w - 1]
 
         while left < right:
             mid: int = (left + right) // 2
@@ -43,9 +44,10 @@ class Solution:
 
         return left
 
+
 class TestSolution(unittest.TestCase):
     def test_example1(self):
-        actual = Solution().kthSmallest([[ 1, 5, 9], [10,11,13], [12,13,15]], 8)
+        actual = Solution().kthSmallest([[1, 5, 9], [10, 11, 13], [12, 13, 15]], 8)
         self.assertEqual(13, actual)
 
 

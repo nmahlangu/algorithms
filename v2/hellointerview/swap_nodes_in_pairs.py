@@ -48,6 +48,7 @@ class Solution:
             curr = curr.next
         return head
 
+
 class TestSolution(unittest.TestCase):
     def test_example1(self):
         actual = Solution().list_to_array(
