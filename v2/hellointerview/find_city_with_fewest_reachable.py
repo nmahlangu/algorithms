@@ -22,9 +22,7 @@ class Solution:
         # return min of those
 
         # (i,j) = distance from vertex i to j, default to infinity (aka unreachable)
-        dist: list[list[float]] = [
-            [float("inf") for _ in range(n)] for _ in range(n)
-        ]
+        dist: list[list[float]] = [[float("inf") for _ in range(n)] for _ in range(n)]
 
         # store actual distances
         for u, v, w in edges:
