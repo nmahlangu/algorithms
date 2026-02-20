@@ -8,6 +8,7 @@ will always be positive
 
 
 class Solution:
+    # Option 1: Top down DP
     def climb_stairs_dp_top_down(self, stairs: int) -> int:
         if stairs <= 1:
             return 1
@@ -16,10 +17,11 @@ class Solution:
             stairs - 1
         ) + self.climb_stairs_dp_top_down(stairs - 2)
 
+    # Option 2: Memoized top down DP
     def climb_stairs_2(self, stairs: int) -> int:
         if stairs < 0:
             return -1
-        
+
         memo: dict[int, int] = {}
         return self.climb_stairs_dp_top_down(stairs)
 
@@ -33,9 +35,10 @@ class Solution:
         memo[stairs] = self.climb_stairs_dp_top_down(
             stairs - 1
         ) + self.climb_stairs_dp_top_down(stairs - 2)
-        
+
         return memo[stairs]
 
+    # Option 3: Bottom up DP
     def climb_stairs_bottom_up_1(self, stairs: int) -> int:
         if stairs <= 1:
             return 1
@@ -49,6 +52,7 @@ class Solution:
 
         return dp[stairs]
 
+    # Option 4: Optimized bottom up DP
     def climb_stairs_bottom_up_2(self, stairs: int) -> int:
         if stairs <= 1:
             return 1
@@ -62,6 +66,7 @@ class Solution:
             curr = new
 
         return curr
+
 
 class TestSolution(unittest.TestCase):
     def test_zero_stairs(self) -> None:
@@ -91,7 +96,6 @@ class TestSolution(unittest.TestCase):
     def test_ten_stairs(self) -> None:
         actual = Solution().climb_stairs_dp_top_down(10)
         self.assertEqual(89, actual)
-
 
 
 class TestSolution2(unittest.TestCase):
