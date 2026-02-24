@@ -13,10 +13,6 @@ the remaining substring from j to i is a dictionary word."
 
 
 class Solution:
-    def word_break(self, s: str, wordDict: List[str]):
-        # memo
-        pass
-
     def word_break_bu(self, s: str, wordDict: List[str]) -> bool:
         if not s:
             return False
